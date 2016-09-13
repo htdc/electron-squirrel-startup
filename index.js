@@ -18,11 +18,11 @@ var check = function() {
     var target = path.basename(process.execPath);
 
     if (cmd === '--squirrel-install' || cmd === '--squirrel-updated') {
-      run(["--createShortcut=" + target + " --shortcut-locations='Startup,Desktop,StartMenu'"], app.quit);
+      run(["--createShortcut=" + target + "--shortcut-locations=Startup,Desktop,StartMenu"], app.quit);
       return true;
     }
     if (cmd === '--squirrel-uninstall') {
-      run(["--removeShortcut=" + target + " --shortcut-locations='Startup,Desktop,StartMenu'"], app.quit);
+      run(["--removeShortcut=" + target + "--shortcut-locations=Startup,Desktop,StartMenu"], app.quit);
       return true;
     }
     if (cmd === '--squirrel-obsolete') {
