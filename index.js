@@ -18,7 +18,7 @@ var check = function() {
     var target = path.basename(process.execPath);
 
     if (cmd === '--squirrel-install' || cmd === '--squirrel-updated') {
-      run(["--createShortcut=" + target, "--shortcut-locations=Startup,Desktop,StartMenu"]);
+     run(["--createShortcut=" + target, "--shortcut-locations=Startup,Desktop,StartMenu"], function(){console.log("Installed shortcuts");});
       return false;
     }
     if (cmd === '--squirrel-uninstall') {
